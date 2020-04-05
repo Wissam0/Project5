@@ -1,28 +1,41 @@
 Capstone project
+# About
 
-Connect with three apis from server side by sending request urls
+This Repo is part of a excercise for the Frontend Developer Udacity Nanodegree. It implements a Travel App which gives you a weather forecast from [Darksky API] (https://darksky.net/). Enter Location name and Date and you will get back the weather forecast and a picture of the destination from [Pixabay] (https://pixabay.com/). 
 
-save the api keys in the .env files
+# Getting started
 
-but for your convenience, following are the content inside this file
+1. Fork this repo and clone it down to your machine.Alternatively, you may download the zip folder and unzip it.
+Open in an IDE  (VS code is suggested)
 
-user_name = 'ZihanTian'
-darkkey = '99d9838d794f38deceedf7a1b281b874'
-imagekey = '14839721-018cdf8eb34520de807d662c3'
+`cd` into your new folder and run:
 
-This is a traval planner app.
+2. `npm install` thus you will have all your node-modules installed
+To make all this work, you need to get your own API Keys. (username for Geonames)
 
-User will neeed to tap in their destination (city), departing time and returning time. Then an image of the destination will be updated, together with some weather imformation and duration of the travel time. 
+3. Signup for an API keys
 
-Dependencies:
+Get your Keys form the following services:
 
-"cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-fetch": "^2.6.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "regenerator-runtime": "^0.13.3",
-    "terser-webpack-plugin": "^2.3.1",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+- [Geonames] (https://www.geonames.org/) to get LAT/LON coordinates for your location
+- [DarkSky] (https://darksky.net/) to get the Weather forecast (based on LAT/LON)
+- [Pixbay] (https://pixabay.com/) to get a nice picture (url is approved)
+
+Signing up will get you an API key. 
+
+4. Hide your Key using a .env file
+
+- [] Create a new `.env` file in the root of your project
+- [] Fill in the API username and keys in it and save it all
+```
+
+GEO=**************************
+DARK=**************************
+PIXA=**************************
+
+```
+- [] Go to your .gitignore file and add `.env` - this will make sure that we don't push our environment variables to Github! to protect YOUR API keys.
+
+5. Dependencies
+
+- Dependencies and Development Dependencies are listed in package.json file. Because npm install mentioned at step 2 installs all the Dependencies, no need to worry about them.
